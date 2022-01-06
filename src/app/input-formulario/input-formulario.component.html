@@ -1,0 +1,48 @@
+<div class="example-container">
+    <mat-card>
+        <mat-card-title> Ingresa una nueva Tareas</mat-card-title>
+        <mat-card-subtitle> Completa los campos para ingresar una nueva tarea al listado CRUD de abajo
+        </mat-card-subtitle>
+        <mat-card-content>
+            <!-- INPUT TITULO -->
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ingresa el titulo</mat-label>
+                    <input matInput #message maxlength="20" [(ngModel)]="selectedCard.titulo" name="input_titulo" placeholder="Ej: Imagen del perro meme...">
+                    <mat-hint align="start"><strong>No ingreses datos personales</strong> </mat-hint>
+                    <mat-hint align="end">{{message.value.length}} / 30</mat-hint>
+                </mat-form-field>
+            </form>
+
+            <!-- INPUT SUBTITULO -->
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ingresa el subtitulo</mat-label>
+                    <input matInput #message maxlength="10" [(ngModel)]="selectedCard.subtitulo" name="input_subtitulo" placeholder="Ej: Imagen del perro meme...">
+                    <mat-hint align="start"><strong>No ingreses datos personales</strong> </mat-hint>
+                    <mat-hint align="end">{{message.value.length}} / 30</mat-hint>
+                </mat-form-field>
+            </form>
+
+            <!-- INPUT DESCRIPCION -->
+            <form>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ingresa la descripcion</mat-label>
+                    <textarea matInput [(ngModel)]="selectedCard.descripcion" name="input_descripcion" placeholder="Ej: hola hola esto es un textarea chavales..."></textarea>
+                    <mat-hint align="start"><strong>No ingreses datos personales</strong> </mat-hint>
+                    <mat-hint align="end">{{message.value.length}} / 56</mat-hint>
+                </mat-form-field>
+            </form>
+
+            <!-- PENDIENTE -->
+            <!-- INPUT IMAGEN -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="sucess">Guardar <mat-icon>save</mat-icon></button>
+            <button mat-raised-button color="warning">Limpiar <mat-icon>clear</mat-icon></button>
+        </mat-card-actions>
+
+
+    </mat-card>
+
+</div>

@@ -1,0 +1,28 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    max-height: auto;
+    margin: auto;
+}
+
+.example-card {
+    max-width: 200px;
+    max-height: 400px;
+    margin: 10px 20px 10px 0px;
+}
+
+.example-card:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+button {
+    margin: 5px;
+}
